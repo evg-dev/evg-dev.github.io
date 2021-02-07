@@ -1,0 +1,41 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Developer Handbook</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/_nuxt/b8d15b0.js" as="script"><link rel="preload" href="/_nuxt/ff7da8d.js" as="script"><link rel="preload" href="/_nuxt/d611dbc.js" as="script"><link rel="preload" href="/_nuxt/af17588.js" as="script"><link rel="preload" href="/_nuxt/510203e.js" as="script"><style data-vue-ssr-id="12ba2d00:0 7e56e4e3:0 1b0f41eb:0 323d84f0:0">*,:after,:before{box-sizing:border-box;margin:0}.button--green{display:inline-block;border-radius:4px;border:1px solid #3b8070;color:#3b8070;text-decoration:none;padding:10px 30px}.button--green:hover{color:#fff;background-color:#3b8070}.button--grey{display:inline-block;border-radius:4px;border:1px solid #35495e;color:#35495e;text-decoration:none;padding:10px 30px;margin-left:15px}.button--grey:hover{color:#fff;background-color:#35495e}.container{margin:0 auto;min-height:100vh;display:flex;justify-content:center;align-items:flex-start;text-align:center;position:fixed;top:55px;left:90px;height:100%;overflow-y:auto;width:calc(100% - 90px);padding:10px 10px 80px}.title{font-family:Quicksand,"Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;display:block;font-weight:300;font-size:100px;color:#35495e;letter-spacing:1px}.subtitle{font-weight:300;font-size:42px;color:#526488;word-spacing:5px;padding-bottom:15px}.links{padding-top:15px}html{color:#2f495e;font-family:"Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:16px;word-spacing:1px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;box-sizing:border-box}#panel{position:fixed;left:0;top:70px;width:90px;height:100%;text-align:left;z-index:50;box-shadow:0 2px 2px 0 #00c58e}.panel_menu{margin-top:20px}.panel_menu_item{margin-top:10px;margin-left:10px}.panel_menu_item a{text-decoration:none;color:#2f495e}header{top:0;height:55px}.header_line,header{position:fixed;left:0;width:100%;text-align:right;line-height:55px;padding-right:20px;z-index:100}.header_line{top:50px;height:5px;box-shadow:0 1px 2px 0 rgba(0,0,0,.06),0 2px 2px 0 rgba(0,0,0,.06)}.green{color:#00c58e}#panda{float:right;position:absolute;bottom:-2px;right:0}.category_item{padding:5px 10px;margin:5px;background-color:#00c58e;border-radius:.25rem;box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);cursor:pointer}.category_item,a{text-decoration:none;color:#fff}.category_detail{width:inherit;overflow-x:auto}.category_detail .article_item h2{margin-top:10px}.category_detail .article_item .article_body,.category_detail .article_item .tease{margin-top:10px;text-align:left}pre{display:block;padding:9.5px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px;min-width:-webkit-max-content;min-width:-moz-max-content;min-width:max-content}p,pre{margin:0 0 10px}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}.NuxtLogo{-webkit-animation:appear 1s;animation:appear 1s;margin:auto}@-webkit-keyframes appear{0%{opacity:0}}@keyframes appear{0%{opacity:0}}</style>
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="main"><header><div class="header_title">Developer <span class="green">HandBook</span></div> <div class="header_line"></div></header> <div id="panel"><div class="panel_menu"><div class="panel_menu_item"><a href="/handbook">Handbook</a></div> <div class="panel_menu_item"><a href="/about">About</a></div></div></div> <div class="container"><div class="category_detail"><div><h1>Postgres</h1> <div class="article_item"><h2>Install PostgreSQL</h2> <div class="tease"><p>Ubuntu/Debain install postgreSQL tutorial</p>
+</div> <div class="article_body"><pre><code class="language-bash">sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+</code></pre>
+<p>Check install</p>
+<pre><code>sudo -i -u postgres psql
+</code></pre>
+<p>Create user in linux</p>
+<pre><code class="language-bash">sudo adduser username
+</code></pre>
+<p>Add user in postgres </p>
+<pre><code class="language-bash">sudo -u postgres createuser --interactive
+</code></pre>
+<p>And see</p>
+<pre><code class="language-bash">Enter name of role to add: username
+Shall the new role be a superuser? (y/n) y
+</code></pre>
+<p>Create database</p>
+<pre><code class="language-bash">sudo -u postgres createdb username
+</code></pre>
+<p>Enter on postgres</p>
+<pre><code class="language-bash">sudo -u username psql
+</code></pre>
+<p>Set privileges</p>
+<pre><code class="language-postgresql">GRANT ALL PRIVILEGES ON DATABASE  dbname TO username;
+</code></pre>
+<p>Set password for user</p>
+<pre><code class="language-postgresql">ALTER USER username WITH PASSWORD 'password';
+</code></pre>
+<p>Set owner</p>
+<pre><code class="language-postgresql">ALTER DATABASE dbname OWNER TO username;
+</code></pre>
+</div></div></div></div></div></div></div></div><script>window.__NUXT__=function(r,n,e,s){return e.id=4,e.slug=r,e.name=n,s[0]={id:2,title:"Install PostgreSQL",slug:"install-postgres",category:{id:4,slug:r,name:n},tease:"Ubuntu/Debain install postgreSQL tutorial",body:"``` bash\r\nsudo apt-get update\r\nsudo apt-get install postgresql postgresql-contrib\r\n```\r\nCheck install\r\n\r\n```\r\nsudo -i -u postgres psql\r\n```\r\n\r\nCreate user in linux\r\n\r\n```bash\r\nsudo adduser username\r\n```\r\n\r\nAdd user in postgres \r\n\r\n```bash\r\nsudo -u postgres createuser --interactive\r\n```\r\nAnd see\r\n\r\n```bash\r\nEnter name of role to add: username\r\nShall the new role be a superuser? (y/n) y\r\n```\r\n\r\nCreate database\r\n\r\n```bash\r\nsudo -u postgres createdb username\r\n```\r\n\r\nEnter on postgres\r\n\r\n```bash\r\nsudo -u username psql\r\n```\r\n\r\nSet privileges\r\n\r\n```postgresql\r\nGRANT ALL PRIVILEGES ON DATABASE  dbname TO username;\r\n```\r\n\r\nSet password for user\r\n\r\n```postgresql\r\nALTER USER username WITH PASSWORD 'password';\r\n```\r\nSet owner\r\n\r\n```postgresql\r\nALTER DATABASE dbname OWNER TO username;\r\n```",draft:!0},{layout:"default",data:[[e,s]],fetch:[],error:null,state:{handbook:{categories:[{id:1,slug:"linux",name:"Linux"},{id:2,slug:"django",name:"Django"},{id:3,slug:"pelican",name:"Pelican"},{id:4,slug:r,name:n}],category:e,category_articles:s}},serverRendered:!0,routePath:"/handbook/postgres",config:{}}}("postgres","Postgres",{},Array(1))</script><script src="/_nuxt/b8d15b0.js" defer></script><script src="/_nuxt/af17588.js" defer></script><script src="/_nuxt/510203e.js" defer></script><script src="/_nuxt/ff7da8d.js" defer></script><script src="/_nuxt/d611dbc.js" defer></script>
+  </body>
+</html>
