@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Developer Handbook</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/_nuxt/eef3954.js" as="script"><link rel="preload" href="/_nuxt/8d5e343.js" as="script"><link rel="preload" href="/_nuxt/5750780.js" as="script"><link rel="preload" href="/_nuxt/935c3ad.js" as="script"><link rel="preload" href="/_nuxt/789d97f.js" as="script"><link rel="preload" href="/_nuxt/294ac52.js" as="script"><link rel="preload" href="/_nuxt/6cb41bd.js" as="script"><link rel="preload" href="/_nuxt/3114b74.js" as="script"><link rel="preload" href="/_nuxt/5f3f56e.js" as="script"><link rel="preload" href="/_nuxt/a4128f0.js" as="script"><link rel="preload" href="/_nuxt/1cf2596.js" as="script"><link rel="preload" href="/_nuxt/f4fd3ff.js" as="script"><link rel="preload" href="/_nuxt/2c43dce.js" as="script"><link rel="preload" href="/_nuxt/c721315.js" as="script"><link rel="preload" href="/_nuxt/57d85d5.js" as="script"><link rel="preload" href="/_nuxt/c994bfd.js" as="script"><link rel="preload" href="/_nuxt/e9d63b6.js" as="script"><link rel="preload" href="/_nuxt/4985eae.js" as="script"><link rel="preload" href="/_nuxt/b4f6df4.js" as="script"><link rel="preload" href="/_nuxt/c141789.js" as="script"><link rel="preload" href="/_nuxt/92fa807.js" as="script"><link rel="preload" href="/_nuxt/ea10d25.js" as="script"><link rel="preload" href="/_nuxt/d2cc5e9.js" as="script"><link rel="preload" href="/_nuxt/5993ab2.js" as="script"><link rel="preload" href="/_nuxt/d73697d.js" as="script"><link rel="preload" href="/_nuxt/635a7bb.js" as="script"><link rel="preload" href="/_nuxt/dfe57b2.js" as="script"><link rel="preload" href="/_nuxt/516b41b.js" as="script"><link rel="preload" href="/_nuxt/d5a04e9.js" as="script"><link rel="preload" href="/_nuxt/d967272.js" as="script"><link rel="preload" href="/_nuxt/css/7a3f40f.css" as="style"><link rel="preload" href="/_nuxt/d373905.js" as="script"><link rel="preload" href="/_nuxt/6a5d579.js" as="script"><link rel="preload" href="/_nuxt/css/6344610.css" as="style"><link rel="preload" href="/_nuxt/b8d12a6.js" as="script"><link rel="preload" href="/_nuxt/b91a636.js" as="script"><link rel="preload" href="/_nuxt/8695154.js" as="script"><link rel="preload" href="/_nuxt/9e9c43e.js" as="script"><link rel="preload" href="/_nuxt/6960143.js" as="script"><link rel="preload" href="/_nuxt/1035466.js" as="script"><link rel="preload" href="/_nuxt/de501e3.js" as="script"><link rel="stylesheet" href="/_nuxt/css/7a3f40f.css"><link rel="stylesheet" href="/_nuxt/css/6344610.css">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div id="main"><header><div class="header_container"><a href="/"><div class="header_title">Developer <span class="green">HandBook</span></div></a> <div id="menu"><div></div> <div></div> <div></div></div></div></header> <div class="page_content"><div class="container"><div class="handbook_wrapper"><div class="filter_wrapper"><div class="category_header"><div class="font_18_bold_21 title">Filters</div> <div class="font_16_500_19">Category</div></div> <div class="category_list"><a href="/handbook/" class="category_item">
+            All
+        </a> <a href="/handbook/linux" class="category_item">
+            Linux
+        </a><a href="/handbook/pelican" class="category_item active">
+            Pelican
+        </a><a href="/handbook/docker" class="category_item">
+            Docker
+        </a><a href="/handbook/postgresql" class="category_item">
+            PostgreSQL
+        </a><a href="/handbook/c" class="category_item">
+            C
+        </a></div></div> <div class="result_filter_wrapper"><!----> <div class="article_list_container_wrapper"><div class="article_list_container"><div class="article_detail_page"><h2>Pelican Tutorial</h2> <div class="tease"><div><p>Tutorial for Pelican, static site generator, written in Python.</p>
+</div></div> <div class="article_body"><div><p>python3 install from pip3</p>
+<pre><code class="language-bash">pip3 install pelican markdown
+</code></pre>
+<p>Quick initial project</p>
+<pre><code class="language-bash">pelican-quickstart
+</code></pre>
+<p>Setup pelicanconf.py for local developing</p>
+<pre><code class="language-bash">RELATIVE_URLS =True
+</code></pre>
+<p>Run develop server</p>
+<pre><code class="language-bash">make devserver
+
+pelican --list
+</code></pre>
+<p>Build with options</p>
+<pre><code class="language-bash">pelican -s pelicanconf.py -o output -D
+</code></pre>
+<p>Download templates</p>
+<pre><code class="language-bash">git clone --recursive https://github.com/getpelican/pelicanthemes.git
+</code></pre>
+<p>Select theme, copy to <code>/theme/</code> on root project and set you THEME on pelicanconf.py for customisation</p>
+<pre><code class="language-bash">THEME='/theme/{{your_theme}}/';
+</code></pre>
+</div></div> <div class="tag_wrapper"></div> <div class="result_filter_header article"><a href="/handbook/pelican" class="button nuxt-link-active">Back to category:
+            Pelican
+        </a></div></div></div> <!----></div></div></div></div></div> <footer><div class="footer_container"></div></footer></div></div></div><script>window.__NUXT__=function(n,e,r,t,a){return n.id=5,n.title="Pelican Tutorial",n.slug="pelican-tutorial",n.category={id:3,slug:e,name:r},n.tease="Tutorial for Pelican, static site generator, written in Python.",n.body="python3 install from pip3\r\n\r\n```bash\r\npip3 install pelican markdown\r\n```\r\n\r\nQuick initial project\r\n\r\n```bash\r\npelican-quickstart\r\n```\r\n\r\n\r\nSetup pelicanconf.py for local developing\r\n\r\n```bash\r\nRELATIVE_URLS =True\r\n```\r\n\r\nRun develop server\r\n\r\n```bash\r\nmake devserver\r\n\r\npelican --list\r\n```\r\n\r\nBuild with options\r\n\r\n```bash\r\npelican -s pelicanconf.py -o output -D\r\n```\r\n\r\nDownload templates\r\n\r\n```bash\r\ngit clone --recursive https://github.com/getpelican/pelicanthemes.git\r\n```\r\n\r\nSelect theme, copy to <code>/theme/</code> on root project and set you THEME on pelicanconf.py for customisation\r\n\r\n```bash\r\nTHEME='/theme/{{your_theme}}/';\r\n```",n.draft=!0,t[0]={id:1,slug:"linux",name:"Linux"},t[1]={id:3,slug:e,name:r},t[2]={id:2,slug:"docker",name:"Docker"},t[3]={id:4,slug:"postgresql",name:"PostgreSQL"},t[4]={id:5,slug:"c",name:"C"},{layout:"default",data:[[n,t]],fetch:{},error:a,state:{open_panel:!1,board:{posts:[]},core:{},handbook:{categories:t,category:!1,category_articles:[],articles:[],article:n}},serverRendered:!0,routePath:"/handbook/pelican/pelican-tutorial",config:{_app:{basePath:"/",assetsPath:"/_nuxt/",cdnURL:a}}}}({},"pelican","Pelican",Array(5),null)</script><script src="/_nuxt/eef3954.js" defer></script><script src="/_nuxt/b91a636.js" defer></script><script src="/_nuxt/8695154.js" defer></script><script src="/_nuxt/9e9c43e.js" defer></script><script src="/_nuxt/6960143.js" defer></script><script src="/_nuxt/1035466.js" defer></script><script src="/_nuxt/de501e3.js" defer></script><script src="/_nuxt/8d5e343.js" defer></script><script src="/_nuxt/5750780.js" defer></script><script src="/_nuxt/935c3ad.js" defer></script><script src="/_nuxt/789d97f.js" defer></script><script src="/_nuxt/294ac52.js" defer></script><script src="/_nuxt/6cb41bd.js" defer></script><script src="/_nuxt/3114b74.js" defer></script><script src="/_nuxt/5f3f56e.js" defer></script><script src="/_nuxt/a4128f0.js" defer></script><script src="/_nuxt/1cf2596.js" defer></script><script src="/_nuxt/f4fd3ff.js" defer></script><script src="/_nuxt/2c43dce.js" defer></script><script src="/_nuxt/c721315.js" defer></script><script src="/_nuxt/57d85d5.js" defer></script><script src="/_nuxt/c994bfd.js" defer></script><script src="/_nuxt/e9d63b6.js" defer></script><script src="/_nuxt/4985eae.js" defer></script><script src="/_nuxt/b4f6df4.js" defer></script><script src="/_nuxt/c141789.js" defer></script><script src="/_nuxt/92fa807.js" defer></script><script src="/_nuxt/ea10d25.js" defer></script><script src="/_nuxt/d2cc5e9.js" defer></script><script src="/_nuxt/5993ab2.js" defer></script><script src="/_nuxt/d73697d.js" defer></script><script src="/_nuxt/635a7bb.js" defer></script><script src="/_nuxt/dfe57b2.js" defer></script><script src="/_nuxt/516b41b.js" defer></script><script src="/_nuxt/d5a04e9.js" defer></script><script src="/_nuxt/d967272.js" defer></script><script src="/_nuxt/d373905.js" defer></script><script src="/_nuxt/6a5d579.js" defer></script><script src="/_nuxt/b8d12a6.js" defer></script>
+  </body>
+</html>
